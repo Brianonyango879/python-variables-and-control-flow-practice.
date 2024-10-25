@@ -1,11 +1,13 @@
-# Ask the user age
-age = int(input("Enter your age: "))
+def age_checker():
+    age = int(input("Enter your age: "))
 # Determine the category based on age
-if age < 18:
-    category = "Minor"
-elif 18 <= age <= 65:
-    category = "Adult"
-else:
-    category = "Senior"
+    if age < 0:
+        return "Age Invalid!"
+    elif age < 18:
+        return "You are a Minor"
+    elif age <= 65:
+        return "You are an Adult"
+    else:
+        return "You are a Senior"
 # Print the category
-print(f"You are a {category}.")
+print(age_checker())
