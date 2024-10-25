@@ -1,15 +1,20 @@
-# Input score from user
-score = int(input("Enter the score (0-100): "))
-# Determine grade based on score
-if 90 <= score <= 100:
-    grade = 'A'
-elif 80 <= score <= 89:
-    grade = 'B'
-elif 70 <= score <= 79:
-    grade = 'C'
-elif 60 <= score <= 69:
-    grade = 'D'
-else:
-    grade = 'F'
-# Print the grade
-print(f"The grade for a score of {score} is: {grade}")
+
+def grade_categorizer():
+    score = int(input("Enter score:"))
+# validation
+    if score < 0 or score > 100:
+        return "Invalid score!"
+    else:
+#categorize
+        if score >= 90:
+            grade = "A"
+        elif score >= 80:
+            grade = "B"
+        elif score >= 70:
+            grade = "C"
+        elif score >= 60:
+            grade = "D"
+        else:
+            grade = "F"
+        return grade
+print(grade_categorizer())
